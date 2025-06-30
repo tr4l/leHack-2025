@@ -1,0 +1,33 @@
+POST http://localhost:3000 HTTP/1.1
+Accept: text/x-component
+content-type: multipart/form-data; boundary=----ElGreatSplitter
+Next-Action: 403e8a958c94318b82ce5f95048bcdddcd6f4e2a76
+Origin: http://localhost:3000
+
+------ElGreatSplitter
+Content-Disposition: form-data; name="1"
+
+{"id":"4079ae6cea023eb332117a9718c64b07e2f0824e2a","bound":null}
+------ElGreatSplitter
+Content-Disposition: form-data; name="0"
+
+["$F1"]
+------ElGreatSplitter--
+
+###
+POST http://localhost:3000 HTTP/1.1
+Accept: text/x-component
+content-type: text/plain; charset=UTF-8
+Next-Action: 006285cfc0b24406a35ae0061281f3b942b461dbf7
+Origin: http://localhost:3000
+
+[]
+
+###
+POST http://localhost:3000 HTTP/1.1
+Accept: text/x-component
+content-type: text/plain; charset=UTF-8
+Next-Action: 4057562aac1b05b6a01a395aff25a9caa83e180b1a
+Origin: http://localhost:3000
+
+["password"]
