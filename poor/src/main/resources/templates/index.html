@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POOR: Proof of Overwhelming Richness</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+    <h1>POOR: Proof of Overwhelming Richness</h1>
+</header>
+<main>
+    <section class="intro">
+        <h2>Welcome to POOR</h2>
+        <p>Rent Bitcoin in a dedicated wallet with personalized user information.</p>
+    </section>
+    <section class="features">
+        <h2>Features</h2>
+        <ul>
+            <li>Secure Bitcoin Wallet</li>
+            <li>Personalized User Information</li>
+            <li>Easy and Transparent Rentals</li>
+        </ul>
+    </section>
+    <section class="cta">
+        <h2>API based</h2>
+        <p>Experience the future of Bitcoin rentals today!</p>
+
+        <h3>Get a token (you can use credentials below to test our api for free!)</h3>
+        <code id="SNIPPET">
+            curl --request POST \<br/>
+            --url $BASE/cognito-proxy/oauth2/token \<br/>
+            --data grant_type=client_credentials \<br/>
+            --data client_id=$CLIENTID \<br/>
+            --data client_secret=$CLIENTSECRET<br/>
+        </code>
+
+        <h3>Then you can test our demo environment, with the appropriate header</h3>
+        <code>
+            curl --request GET \<br/>
+            --url $BASE/api/poors/ \<br/>
+            --header 'Authorization: Bearer $TOKEN' \<br/>
+            --header 'X-Env: dev'
+        </code>
+        <p>Have a look at our full and dynamic <a href="/swagger-ui/index.html">documentation</a>!</p>
+    </section>
+
+    <section class="cta">
+        <h2>Get Started</h2>
+        <p>Experience the future of Bitcoin rentals today!</p>
+        <button>Sign Up Now</button>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2025 POOR. All rights reserved.</p>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const snippet = document.getElementById('SNIPPET');
+        fetch('/api/clients/')
+            .then(response => response.json())
+            .then(data => {
+                // Find the first element in the array with the key usage="dev"
+                const devClient = data.find(client => client.usage === "dev");
+                if (devClient) {
+                    const clientId = devClient.clientId;
+                    const clientSecret = devClient.clientSecret;
+                    snippet.innerHTML = snippet.innerHTML
+                        .replace('$CLIENTID', clientId)
+                        .replace('$CLIENTSECRET', clientSecret)
+                        .replace('$BASE', window.location.origin);
+                }
+            })
+            .catch(error => console.error('Error fetching client data:', error));
+
+        snippet.addEventListener('click', function() {
+            navigator.clipboard.writeText(snippet.textContent).then(function() {
+                alert('Snippet copied to clipboard!');
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        });
+    });
+</script>
+</body>
+</html>

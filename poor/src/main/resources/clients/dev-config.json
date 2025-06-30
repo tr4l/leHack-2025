@@ -1,0 +1,11 @@
+{
+  "usage": "dev",
+  "clientId": "1qconf4f2v146v0qi6kjn25l3m",
+  "clientSecret": "ni1e9k9a25vp5eq2karankjn6atroof1r354s7havetpjunkj2d",
+  "scopes": [
+    "env/dev",
+    "read/all",
+    "write/all",
+    "admin/all"
+  ]
+}

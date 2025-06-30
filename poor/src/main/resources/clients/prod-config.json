@@ -1,0 +1,8 @@
+{
+  "usage": "prod",
+  "clientId": "gn4548b54us8njndnt2587yf89",
+  "clientSecret": "y6ftlnoowd3iq1iv0lfi91ow5xkxpqljjp3gxe1w1s27zqvv22p",
+  "scopes": [
+    "read/poor"
+  ]
+}
