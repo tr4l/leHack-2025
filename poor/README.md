@@ -38,12 +38,12 @@ Medium (easy with enough OAUTH/JWT/JWT-Token knowledge)
 
 ## Challenger path
 
-Go on home page, see client/secret for dev and example usage (with the header)
-Analyse /clients call to "discover" prod client/secret
-Play with the api and see that prod can't get the flag, but the flag is only on prod
-Understand that the env/dev header should match the scope
-See that prod don't use the header or scope
-"Unscope" the dev client to remove "env/dev" and keep the "admin/all" scope
+- Go on home page, see client/secret for dev and example usage (with the header)
+- Analyse /clients call to "discover" prod client/secret
+- Play with the api and see that prod can't get the flag, but the flag is only on prod
+- Understand that the env/dev header should match the scope
+- See that prod don't use the header or scope
+- "Unscope" the dev client to remove "env/dev" and keep the "admin/all" scope
 
 
 ## Possible improvement
@@ -54,7 +54,7 @@ See that prod don't use the header or scope
 - add some noise to avoid LLM/Burp/Random tools to find the flag to quickly ?
 
 ## Env variable
-- 
+
 - LH_FLAG: flag to be displayed
 - LH_SERVER_PORT: port to be used (default 1234)
 - LH_SERVER_ADDRESS: 127.0.0.1 or 0.0.0.0
