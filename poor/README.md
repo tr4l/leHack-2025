@@ -1,5 +1,10 @@
 # POOR: Proof of Overwhelming Richness
 
+
+![POOR](../docs/poor.png "POOR")
+
+## Build
+
 > docker build -t lh2025/`basename "$PWD"` .
 
 Run with the flag
