@@ -1,5 +1,7 @@
 # Next Stock
 
+![stock](../docs/stock.png "stock")
+
 ## Build
 Build with custom (need to be hardcoded) password
 
