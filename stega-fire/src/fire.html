@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Effect - Copilot exercise - Vibe coding</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
+        canvas {
+            display: block;
+            position: absolute;
+        }
+        #mainCanvas {
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="splashScreen" style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: black;
+        color: white;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 24px;
+        text-align: center;
+    ">
+        <button id="startButton" style="
+            background: none;
+            border: 2px solid white;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 24px;
+        ">START</button>
+    </div>
+    <canvas id="mainCanvas" style="display: none;"></canvas>
+    <script src="js/fire.min.js"></script>
+</body>
+</html>
